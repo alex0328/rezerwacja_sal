@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <header>
+        <div class="div_logo">
+
+        </div>
+        <div class="menu">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a href="{% url 'szukaj' %}" >Szukaj</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'home' %}" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'add_room' %}" >Dodaj salę</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <section id="header">
+        <div class="overlay"></div>
+        <div class="header_background">
+        </div>
+        <div class="header_title">
+                <h2>Witaj w systemie rezerwacji sal</h2>
+            </div>
+    </section>
+
+</body>
+</html>
+
+
+

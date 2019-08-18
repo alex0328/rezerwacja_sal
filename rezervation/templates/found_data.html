@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+<p>To właściwa strona</p>
+
+{%  if False  %}
+    {{ date_n }}
+    <p>Nie ma</p>
+{% else %}
+    {% for sss in szukana_data %}
+        <p>to ja:</p>
+        <p>{{ sss.name }}</p>
+        <p>{{ sss.capacity }}</p>
+        {% empty %}
+        <p>Sorki, nie znaleziono sali o podanej nazwie</p>
+
+    {%  endfor %}
+
+{% endif %}
+
+{%  include "footer.html" %}
+</body>
+</html>

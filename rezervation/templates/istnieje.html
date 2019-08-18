@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+<h1>Rezerwacja już istnieje </h1>
+
+<p>Przykro nam, ale rezerwacja na:</p>
+<p>{{ date_n.date }}</p>
+<p>już istnieje.</p>
+{% include "footer.html" %}
+</body>
+</html>

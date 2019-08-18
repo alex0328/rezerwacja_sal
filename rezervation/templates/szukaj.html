@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+
+<section class="main">
+    <h3>Wyszukaj salę:</h3>
+    <form class="modify" method="GET" action="#">
+    {{ form_name }}<br>
+    <p>Wyszukaj datę, zobacz, które sale są wtedy wolne:</p>
+        <p>Wpisz datę w formacie: rrrr-mm-dd</p>
+        {{ form_date }}
+        <br>
+        {{ cap }}
+    <input type="submit">
+    </form>
+</section>
+
+{% include "footer.html" %}
+</body>
+</html>

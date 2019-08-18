@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+<section class="main">
+    <p> Sorki ziom, nie możesz zarezerwować tej salki -
+        Sprawdź czy salka jest na dziś wolna i czy nie wpisałeś wstecznej daty.</p>
+    <p>{{ date_n }}</p><br>
+    <p>{{ today_date }}</p>
+</section>
+{% include "footer.html" %}
+</body>
+</html>
+
+

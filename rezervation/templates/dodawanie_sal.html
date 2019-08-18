@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+<section class="main">
+    <form action='add_room' method="POST">
+        <p>{{ form }}</p>
+        <button type="submit">Submit</button>
+    </form>
+</section>
+{% include "footer.html" %}
+</body>
+</html>

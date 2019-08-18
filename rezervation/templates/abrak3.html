@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+<section id="rooms" class="main">
+        <h1 class="lista_title">Wyniki wyszukiwania</h1>
+    <h3>Szukana fraza:</h3>
+    <p class="sala_data"> {{ nazwa }}</p>
+        <div class="rooms_list">
+            <ul>
+                {% for c in cap %}
+                    {% if c.capacity > pojemnosc %}
+                    <li>
+                        <h4>Nazwa sali:</h4>
+                        <p class="sala_data">{{ c.name }}</p>
+                        <h4>Ta sala pomieści: </h4>
+                        <p class="sala_data">{{ c.capacity }} osób.</p>
+                        {%  if c.projector == True %}
+                            <p class = "projector_true">Dostępny rzutnik</p>
+                            {% else %}
+                            <p class = "projector_false">Brak możliwości skorzystania z rzutnika</p>
+                        {%  endif %}
+                    <h4></h4>
+                    {% if c.id in lista_rezerwacji %}
+                    <p class="projector_false">Ta sala na dziś jest zarezerwowana.</p>
+                    {% else %}
+                    <p class="projector_true">Sala dziś jest wolna</p>
+                    {% endif %}
+                        <a href="{% url 'modify' c.id %}" >Edytuję dane sali</a>
+                        <a href="{% url 'delete' c.id %}" >Usuwam salę</a>
+                        <a href="{% url 'see_more' c.id %}">Rezerwacja</a>
+                    </li>
+                    {% endif %}
+                    {% empty %}
+                    <p>Sorki, nie ma takiej salki</p>
+                    {% endfor %}
+
+            </ul>
+        </div>
+    <section>
+{% include 'footer.html' %}
+</body>

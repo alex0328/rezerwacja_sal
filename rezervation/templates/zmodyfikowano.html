@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+    <p>Zmodyfikowano</p>
+    <p>Nazwa sali: {{ n }}</p>
+    <p>Pojemność sali: {{ y }}</p>
+        {% if a == True %}
+    <p>Sala posiada rzutnik</p>
+        {% else %}
+    <p>Sala nie posiada rzutnika</p>
+        {% endif %}
+{%  include "footer.html" %}
+</body>
+</html>

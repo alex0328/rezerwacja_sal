@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+<section class="main">
+{% for sss in dane_sali %}
+        <h2 class="present_data">Czy na pewno chcesz usunąć tę salę?:</h2>
+        <h3>Nazwa:</h3>
+        <p class="sala_data"> {{ sss.name }}</p>
+        <h3>Pojemność sali:</h3>
+        <p class="sala_data">{{ sss.capacity }}</p>
+        {%  if sss.projector == True %}
+                            <p class = "projector_true">Dostępny rzutnik</p>
+                            {% else %}
+                            <p class = "projector_false">Brak możliwości skorzystania z rzutnika</p>
+                        {%  endif %}
+    {% endfor %}
+    <form class="modify" method="POST">
+        <p>{{ del_form }}</p>
+        <button type="submit">Potwierdzam - usuwaj</button>
+    </form>
+</section>
+{% include "footer.html" %}
+</body>
+</html>
+

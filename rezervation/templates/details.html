@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+<body>
+{% include "header.html" %}
+<section class="main">
+{% for sss in rooma_id %}
+        <h2 class="present_data">Dane wybranej sali:</h2>
+        <h3>Nazwa:</h3>
+        <p class="sala_data"> {{ sss.name }}</p>
+        <h3>Pojemność sali:</h3>
+        <p class="sala_data">{{ sss.capacity }}</p>
+        {%  if sss.projector == True %}
+                            <p class = "projector_true">Dostępny rzutnik</p>
+                            {% else %}
+                            <p class = "projector_false">Brak możliwości skorzystania z rzutnika</p>
+                        {%  endif %}
+    <p>{{ res }}</p>
+    {% endfor %}
+    <form class="reservation" method="POST">
+        <h2>Format daty (rrrr-mm-dd)</h2>
+        <div>{{ Res_form }}</div>
+        <br>
+        <button type="submit">Rezerwuję</button>
+    </form>
+{% if list_empty == True %}
+<h4 class="go_reserv">Do rezerwacji są dostępne wszystkie dni</h4>
+{% else %}
+<h4 class="present_data">Dni, w które sala jest zarezerwowana:</h4>
+    {% for x in dates_list %}
+        <ul>
+            <li class="sala_data">{{ x.day }}, {{ x.month }}, {{ x.year }}</li>
+        </ul>
+    {% endfor %}
+{% endif %}
+</section>
+{% include "footer.html" %}
+</body>
+</html>

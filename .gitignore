@@ -89,6 +89,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+ve_salki
 
 # Spyder project settings
 .spyderproject

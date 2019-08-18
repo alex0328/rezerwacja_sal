@@ -1,0 +1,194 @@
+{% load static %}
+body {
+    margin: 0;
+}
+
+h5 {
+    margin: 20px;
+}
+
+a, button, input[type=submit] {
+    font-size: 28px!important;
+    cursor: pointer;
+    border: 2px solid black!important;
+    padding: 3px 34px!important;
+    text-decoration: none;
+    color: black!important;
+    background-color: white;
+}
+
+a:hover, button:hover, input[type=submit]:hover {
+    background-color: black;
+    color: white!important;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+
+
+#header {
+    background-image: url(img1.jpg);
+    height: 551PX;
+    background-size: cover;
+    background-position: 66% 50%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 76px;
+}
+
+.header_title {
+    color: #fff;
+    font-size: 40px;
+    z-index: 999;
+}
+
+.header_title h2 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 61px;
+}
+
+.lista_title {
+    text-align: center;
+    font-size: 30px;
+    margin: 60px;
+}
+
+ul {
+    display: flex;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.rooms_list ul li {
+    list-style: none;
+    margin: 37px;
+    border: 1px solid;
+    padding: 62px 33px;
+    transition: 0.3s;
+}
+
+.rooms_list ul li:hover {
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.61);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.61);
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.61);
+    transform: scale(1.02);
+}
+
+.projector_true {
+    color: #19865C;
+    font-size: 18px;
+}
+
+.projector_false {
+    color: #993300;
+
+}
+
+.sala_data {
+    color: #534582;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 65px;
+}
+
+.add_button {
+    text-align: center;
+    padding: 25px;
+}
+
+body {
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #534582b3;
+    overflow: hidden;
+}
+
+.nav-item {
+    color: #993300;
+    padding: 20px;
+    border: none;
+}
+
+.present_data {
+    margin: 30px;
+}
+
+.modify {
+    margin: 30px;
+}
+
+.modify p label,
+.modify label {
+    display: block;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.modify p input,
+.modify input {
+    color: #534582;
+    border-color: #534582;
+    width: 350px;
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+
+.modify input[type=submit] {
+    margin-top: 30px;
+    height: unset;
+}
+
+.reservation div label{
+    display: block;
+    font-size: 20px;
+    margin: 15px;
+}
+
+.reservation div input {
+    color: #534582;
+    border-color: #534582;
+    width: 350px;
+    height: 40px;
+}
+
+.foot {
+    height: 80px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.main {
+    margin: 50px;
+}
+
+.go_reserv {
+    margin: 30px;
+}
+
+
+
